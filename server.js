@@ -4,10 +4,10 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 
-const classes = ["warrior", "mage", "ranger"];
+const classes = ["warrior", "mage", "ranger", "necromancer"];
 
 app.get("/newClass", (req, res) => {
-  const index = Math.floor(Math.random() * Math.floor(3));
+  const index = Math.floor(Math.random() * Math.floor(4));
   console.log(index);
   const yourNewClass = classes[index];
   res.send(yourNewClass);
